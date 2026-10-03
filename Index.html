@@ -1,0 +1,359 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Style.CSS">
+</head>
+<body>
+ 
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-headset"></i>
+        </div>
+        <span>StreamDesk</span>
+    </div>
+
+    <div class="menu-title">MAIN MENU</div>
+
+    <nav class="sidebar-nav">
+
+        <a href="#dashboard" class="nav-link active">
+            <i class="fa-solid fa-grid-2"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="#tickets" class="nav-link">
+            <i class="fa-solid fa-ticket"></i>
+            <span>Tickets</span>
+            <b class="menu-badge">8</b>
+        </a>
+
+        <a href="#customers" class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Customers</span>
+        </a>
+
+        <a href="#conversations" class="nav-link">
+            <i class="fa-solid fa-comments"></i>
+            <span>Conversations</span>
+            <b class="menu-badge red">3</b>
+        </a>
+
+        <a href="#analytics" class="nav-link">
+            <i class="fa-solid fa-chart-column"></i>
+            <span>Analytics</span>
+        </a>
+
+        <a href="#notifications" class="nav-link">
+            <i class="fa-solid fa-bell"></i>
+            <span>Notifications</span>
+        </a>
+
+    </nav>
+
+    <div class="menu-title bottom-title">SETTINGS</div>
+
+    <nav class="sidebar-nav">
+
+        <a href="#" class="nav-link">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+
+        <a href="#" class="nav-link">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Help Center</span>
+        </a>
+
+    </nav>
+
+    <div class="sidebar-user">
+
+        <div class="avatar">A</div>
+
+        <div class="user-info">
+            <strong>Admin User</strong>
+            <span>Support Agent</span>
+        </div>
+
+        <i class="fa-solid fa-ellipsis"></i>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div class="mobile-left">
+
+            <button class="mobile-menu" id="mobileMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div>
+                <h1 id="pageTitle">Dashboard</h1>
+                <p>Manage your customer support activity.</p>
+            </div>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <div class="top-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search..."
+                >
+            </div>
+
+            <button class="icon-btn" id="notificationBtn">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot">3</span>
+            </button>
+
+            <div class="top-avatar">A</div>
+
+        </div>
+
+    </header>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboard" class="page-section">
+
+    <div class="welcome-row">
+
+        <div>
+            <h2>Support Overview</h2>
+            <p>Here's what's happening with your support tickets today.</p>
+        </div>
+
+        <button class="primary-btn" id="openTicketBtn">
+            <i class="fa-solid fa-plus"></i>
+            Create Ticket
+        </button>
+
+    </div>
+
+
+    <!-- STAT CARDS -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+                <i class="fa-solid fa-ticket"></i>
+            </div>
+
+            <div>
+                <span>Total Tickets</span>
+                <h3 id="totalTickets">248</h3>
+                <small class="up">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12.5% from last month
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon orange">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+                <span>Open Tickets</span>
+                <h3 id="openTickets">86</h3>
+                <small class="warning-text">
+                    Needs attention
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                <i class="fa-solid fa-spinner"></i>
+            </div>
+
+            <div>
+                <span>In Progress</span>
+                <h3 id="progressTickets">42</h3>
+                <small class="up">
+                    6 resolved today
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+                <span>Resolved</span>
+                <h3 id="resolvedTickets">120</h3>
+                <small class="up">
+                    18.2% this month
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ANALYTICS -->
+
+    <div class="two-column">
+
+        <div class="content-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <h3>Ticket Analytics</h3>
+                    <p>Tickets created during the week</p>
+                </div>
+
+                <select id="chartFilter">
+                    <option>This Week</option>
+                    <option>This Month</option>
+                </select>
+
+            </div>
+
+            <div class="chart">
+
+                <div class="chart-y">
+                    <span>100</span>
+                    <span>75</span>
+                    <span>50</span>
+                    <span>25</span>
+                    <span>0</span>
+                </div>
+
+                <div class="chart-area">
+
+                    <div class="grid-line line1"></div>
+                    <div class="grid-line line2"></div>
+                    <div class="grid-line line3"></div>
+                    <div class="grid-line line4"></div>
+
+                    <div class="bars">
+
+                        <div class="bar-wrap">
+                            <div class="bar" style="height:48%"></div>
+                            <span>Mon</span>
+                        </div>
+
+                        <div class="bar-wrap">
+                            <div class="bar" style="height:72%"></div>
+                            <span>Tue</span>
+                        </div>
+
+                        <div class="bar-wrap">
+                            <div class="bar" style="height:55%"></div>
+                            <span>Wed</span>
+                        </div>
+
+                        <div class="bar-wrap">
+                            <div class="bar" style="height:88%"></div>
+                            <span>Thu</span>
+                        </div>
+
+                        <div class="bar-wrap">
+                            <div class="bar" style="height:68%"></div>
+                            <span>Fri</span>
+                        </div>
+
+                        <div class="bar-wrap">
+                            <div class="bar" style="height:42%"></div>
+                            <span>Sat</span>
+                        </div>
+
+                        <div class="bar-wrap">
+                            <div class="bar" style="height:62%"></div>
+                            <span>Sun</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+  <div class="content-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <h3>Ticket Status</h3>
+                    <p>Current distribution</p>
+                </div>
+
+            </div>
+
+            <div class="status-chart">
+
+                <div class="donut">
+                    <div>
+                        <strong>248</strong>
+                        <span>Total</span>
+                    </div>
+                </div>
+
+                <div class="status-legend">
+
+                    <div>
+                        <span class="legend-dot open-dot"></span>
+                        Open
+                        <strong>86</strong>
+                    </div>
+
+                    <div>
+                        <span class="legend-dot progress-dot"></span>
+                        In Progress
+                        <strong>42</strong>
+                    </div>
+
+                    <div>
+                        <span class="legend-dot pending-dot"></span>
+                        Pending
+                        <strong>24</strong>
+                    </div>
+
+                    <div>
+                        <span class="legend-dot resolved-dot"></span>
+                        Resolved
+                        <strong>96</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Script.js"></script>
+</body>
+</html>
